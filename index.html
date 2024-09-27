@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Md Forhad Hossain</title>
+
+  <link rel="icon" type="image/x-icon" href="./favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+  <link rel="manifest" href="./favicon/site.webmanifest">
+
+  <link rel="stylesheet" href="style.css">
+  <script type="importmap"> { 
+			"imports": { 
+				"three": "./src/js/three.module.min.js",
+				"three/addons/": "./src/js/"
+    		} 
+		}     
+		</script>
+  <script type="module" src="main.js"></script>
+</head>
+
+<body>
+  <div class="loader-container" id="loader-container">
+    <div class="loader">
+      <div class="percent" id="percent">0%</div>
+      <div class="wheel"></div>
+    </div>
+  </div>
+  <div class="credit" id="credit" onclick="showCredit()">credit</div>
+  <div class="contact">
+    <a class="facebook" href="https://www.facebook.com/forhad.2004"  target="_blank"><img src="./src/textures/facebook_icon.png"></a>
+    <a class="linkedin" href="https://www.linkedin.com/in/md-forhad-hossain-1a55a42ba"  target="_blank"><img src="./src/textures/linkedin_icon.png"></a>
+    <a class="telegram" href="http://t.me/mdforhadhossain2004"  target="_blank"><img src="./src/textures/telegram_icon.png"></a>
+  </div>
+  <span class="instruction">
+    <div class="mouse"></div>
+    <div class="text" id="text"> Scroll to Explore </div>
+  </span>
+
+  <div class="cards-container" id="cards-container">
+    <div class="cards" id="cards"> </div>
+    <div class="close" id="close"> X </div>
+  </div>
+
+  <div class="css3d-container" id="css3d-container"></div>
+
+</body>
+
+</html>
