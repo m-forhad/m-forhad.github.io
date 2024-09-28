@@ -20,9 +20,9 @@ To run this project locally, follow these steps:
    git clone https://github.com/m-forhad/m-forhad.github.io.git
    ```
 2. Navigate to the project directory:
-  ```bash
-  cd m-forhad.github.io
-  ```
+   ```bash
+   cd m-forhad.github.io
+   ```
 3. Open index.html in your browser to view the website.
 
 ## Screenshots
