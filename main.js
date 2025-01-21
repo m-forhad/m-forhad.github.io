@@ -41,12 +41,10 @@ const ambientLight = new THREE.AmbientLight(0xffffff, 1.5);
 scene.add(ambientLight);
 
 const loaderContainer = document.getElementById('loader-container');
-const loaderPercent = document.getElementById('percent');
 
 const manager = new THREE.LoadingManager();
 manager.onProgress = function(url, itemsLoaded, itemsTotal) {
   const progress = (itemsLoaded / itemsTotal) * 100;
-  loaderPercent.textContent = Math.floor(progress) + '%';
 };
 manager.onLoad = function() {
   loaderContainer.style.display = 'none';

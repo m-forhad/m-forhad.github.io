@@ -36,41 +36,28 @@ a {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.loader {
   width: 120px;
-  height: 120px;
-  font-size: 40px;
-  color: white;
+  aspect-ratio: 1;
+  --c:no-repeat linear-gradient(white 0 0);
+  background:
+    var(--c) left   40px top    0,
+    var(--c) top    40px right  0,
+    var(--c) right  40px bottom 0,
+    var(--c) bottom 40px left   0;
+  background-size:calc(100%/3) calc(100%/3);
+  animation: 
+    l29-1 .75s infinite alternate linear,
+    l29-2 1.5s infinite;
 }
-
-.percent {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 40px;
-  color: white;
+@keyframes l29-1 {
+ 90%,100% {background-size:calc(2*100%/3) calc(100%/3),calc(100%/3) calc(2*100%/3)}
 }
-
-.wheel {
-  position: absolute;
-  top: 0;
-  left: 0;
-  border: 16px solid #f3f3f3;
-  border-radius: 50%;
-  border-top: 16px solid #3498db;
-  width: 100%;
-  height: 100%;
-  animation: spin 2s linear infinite;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
+@keyframes l29-2 {
+ 0%,49.99% {transform:scaleX(1)}
+ 50%,100%  {transform:scaleX(-1)}
 }
 
 canvas {
@@ -149,37 +136,33 @@ canvas {
   top: 50%;
   left: 100%;
   transform: translate(-100%, -50%);
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  flex-wrap: nowrap;
   width: 80px;
-  height: 100px;
   z-index: 3;
 }
 
 .contact a {
   display: block;
   position: relative;
-  width: 40px;
-  height: 33%;
+  margin: 2px 0;
+  height: 40px;
   border: 1px solid whitesmoke;
   border-radius: 25px 0 0 25px;
-  transition: 0.3s;
+  transition: 0.2s ease-out;
+  transform: translateX(50%);
 }
 
 .contact a:hover {
-  width: 60px;
+  transform: translateX(0);
 
 }
 
-.contact a img {
+.contact a i {
   position: absolute;
   top: 50%;
   left: 5px;
   transform: translateY(-50%);
-  width: 30px;
-  height: auto;
+  color: white;
+  font-size: 40px;
 }
 
 .facebook {
