@@ -82,7 +82,7 @@ pole.position.set(-80, 280, -1500);
 scene.add(pole);
 
 // My photo poster - Three js
-const posterTexture = textureLoader.load('./src/textures/my_photo.png');
+const posterTexture = textureLoader.load('./src/textures/my_photo.jpg');
 const posterGeometry = new THREE.BoxGeometry(265, 375, 2);
 const posterMaterial = new THREE.MeshStandardMaterial({ map: posterTexture });
 const poster = new THREE.Mesh(posterGeometry, posterMaterial);
@@ -428,4 +428,5 @@ document.getElementById("close").onclick = function() {
 cardsContainer.onclick = function() {
   this.style.display = "none";
   document.getElementById("cards").innerHTML = "";
+
 }
