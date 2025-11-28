@@ -291,6 +291,7 @@ const positions = [
       new THREE.Vector3(-150, 725, -258),
       new THREE.Vector3(-150, 410, -258),
       new THREE.Vector3(-150, 390, -258),
+      new THREE.Vector3(-50, 390, -258), //new
       new THREE.Vector3(110, 300, -540),
       new THREE.Vector3(140, 300, -540),
       new THREE.Vector3(580, 500, 680),
@@ -300,6 +301,7 @@ const rotations = [
       new THREE.Euler(0, 0, 0),
       new THREE.Euler(0, 0, 0),
       new THREE.Euler(-Math.PI / 20, 0, 0),
+      new THREE.Euler(0, Math.PI / 2, 0),
       new THREE.Euler(0, Math.PI / 2, 0),
       new THREE.Euler(0, Math.PI / 2, 0),
       new THREE.Euler(0, Math.PI / 2, 0),
@@ -430,3 +432,4 @@ cardsContainer.onclick = function() {
   document.getElementById("cards").innerHTML = "";
 
 }
+
