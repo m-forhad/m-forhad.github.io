@@ -287,11 +287,11 @@ window.addEventListener('click', onMouseClick, false);
 const positions = [
       new THREE.Vector3(425, 750, -200),
       new THREE.Vector3(425, 575, -200),
-      new THREE.Vector3(120, 500, -700),
+      new THREE.Vector3(120, 500, -200),
       new THREE.Vector3(-150, 725, -258),
       new THREE.Vector3(-150, 410, -258),
       new THREE.Vector3(-150, 390, -258),
-      new THREE.Vector3(50, 390, -258), //new
+      new THREE.Vector3(50, 390, -258),
       new THREE.Vector3(110, 300, -540),
       new THREE.Vector3(140, 300, -540),
       new THREE.Vector3(580, 500, 680),
@@ -432,5 +432,6 @@ cardsContainer.onclick = function() {
   document.getElementById("cards").innerHTML = "";
 
 }
+
 
 
