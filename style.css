@@ -5,9 +5,9 @@
 
 body {
   margin: 0;
-  height: 10000px;
+  height: 12000px;
   position: relative;
-  background: #e43151;
+  background: linear-gradient(135deg, #F6EA41, #F048C6);
 }
 
 a {
@@ -27,33 +27,64 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   width: 100%;
   height: 100vh;
   margin: 0;
-  background: linear-gradient(135deg, #e43151, #807ac1);
+  background: linear-gradient(135deg, #F6EA41, #F048C6);
+  /*  #e43151, #807ac1 */
   z-index: 5;
 }
 
 .loader {
   width: 120px;
   aspect-ratio: 1;
-  --c:no-repeat linear-gradient(white 0 0);
+  --c: no-repeat linear-gradient(white 0 0);
   background:
-    var(--c) left   40px top    0,
-    var(--c) top    40px right  0,
-    var(--c) right  40px bottom 0,
-    var(--c) bottom 40px left   0;
-  background-size:calc(100%/3) calc(100%/3);
-  animation: 
+    var(--c) left 40px top 0,
+    var(--c) top 40px right 0,
+    var(--c) right 40px bottom 0,
+    var(--c) bottom 40px left 0;
+  background-size: calc(100%/3) calc(100%/3);
+  animation:
     l29-1 .75s infinite alternate linear,
     l29-2 1.5s infinite;
 }
+
 @keyframes l29-1 {
- 90%,100% {background-size:calc(2*100%/3) calc(100%/3),calc(100%/3) calc(2*100%/3)}
+
+  90%,
+  100% {
+    background-size: calc(2*100%/3) calc(100%/3), calc(100%/3) calc(2*100%/3)
+  }
 }
+
 @keyframes l29-2 {
- 0%,49.99% {transform:scaleX(1)}
- 50%,100%  {transform:scaleX(-1)}
+
+  0%,
+  49.99% {
+    transform: scaleX(1)
+  }
+
+  50%,
+  100% {
+    transform: scaleX(-1)
+  }
+}
+
+#loaded {
+  width: 120px;
+  color: white;
+  font-size: 2em;
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+}
+
+#loadedBorder {
+  background: white;
+  height: 4px;
+  width: 0%;
 }
 
 canvas {
@@ -68,45 +99,6 @@ canvas {
   font-size: 25px;
   position: fixed;
   z-index: 2;
-}
-
-.css3d-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: 1;
-}
-
-.pc {
-  font-size: 12px;
-  width: 272px;
-  height: 152px;
-  background: skyblue;
-  overflow: hidden;
-  padding: 10px;
-  animation: blink 1s ease-in-out infinite;
-}
-
-@keyframes blink {
-  0% {
-    opacity: 0.9;
-  }
-
-  50% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0.9;
-  }
-}
-
-.pc h3,
-.pc h4 {
-  color: white;
 }
 
 .credit {
@@ -132,7 +124,7 @@ canvas {
   top: 50%;
   left: 100%;
   transform: translate(-100%, -50%);
-  width: 80px;
+  width: 90px;
   z-index: 3;
 }
 
@@ -140,7 +132,7 @@ canvas {
   display: block;
   position: relative;
   margin: 2px 0;
-  height: 40px;
+  height: 45px;
   border: 1px solid whitesmoke;
   border-radius: 25px 0 0 25px;
   transition: 0.2s ease-out;
@@ -155,7 +147,7 @@ canvas {
 .contact a i {
   position: absolute;
   top: 50%;
-  left: 5px;
+  left: 8px;
   transform: translateY(-50%);
   color: white;
   font-size: 30px;
@@ -179,8 +171,10 @@ canvas {
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
-  padding: 5px;
+  padding: 5px 30px;
+  background: rgba(20, 20, 20, 0.2);
   border-radius: 10px;
+  backdrop-filter: blur(5px);
   z-index: 3;
   display: flex;
   flex-wrap: nowrap;
@@ -210,7 +204,7 @@ canvas {
   position: absolute;
   top: 10px;
   background: white;
-  left: 15px;
+  left: 40px;
   border-radius: 50%;
   opacity: 1;
   animation: mouse 1.5s infinite;
@@ -245,7 +239,7 @@ canvas {
   height: 80%;
   top: 50%;
   left: 50%;
-  background: linear-gradient(135deg, #e43151, #807ac1);
+  background: linear-gradient(135deg, #F6EA41, #F048C6);
   border-radius: 20px;
   box-shadow: 10px 10px 20px black;
   transform: translate(-50%, -50%);
